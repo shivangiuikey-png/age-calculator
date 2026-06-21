@@ -1,0 +1,108 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Age Calculator | Find Your Exact Age</title>
+    <meta name="description" content="Calculate your exact age in years, months, and days. A beautiful, responsive, and modern age calculator tool built for accuracy.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle-container">
+        <button id="theme-toggle" aria-label="Toggle Theme" class="theme-toggle-btn">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </div>
+    <!-- Main Container -->
+    <main class="calculator-wrapper">
+        <!-- Header -->
+        <header class="calculator-header">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                </div>
+            </div>
+            <h1 class="calculator-title">Age Calculator</h1>
+            <p class="calculator-subtitle">Track your journey through time with precision</p>
+        </header>
+        <!-- Calculator Card -->
+        <section class="calculator-card">
+            <!-- Input Form -->
+            <div class="input-section">
+                <label for="dob-input" class="input-label">Select Date of Birth</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-calendar-days input-icon"></i>
+                    <input type="date" id="dob-input" class="date-input" required>
+                </div>
+                <div id="error-message" class="error-message hidden">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>Please enter a valid date.</span>
+                </div>
+                <button id="calculate-btn" class="calculate-btn">
+                    <span>Calculate Age</span>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+            </div>
+            <!-- Results Display -->
+            <div class="results-section">
+                <div class="result-card" data-label="Years">
+                    <span id="result-years" class="result-number">--</span>
+                    <span class="result-label">Years</span>
+                </div>
+                <div class="result-card" data-label="Months">
+                    <span id="result-months" class="result-number">--</span>
+                    <span class="result-label">Months</span>
+                </div>
+                <div class="result-card" data-label="Days">
+                    <span id="result-days" class="result-number">--</span>
+                    <span class="result-label">Days</span>
+                </div>
+            </div>
+        </section>
+        <!-- Stats/Extra details (hidden initially, shown on successful calculation) -->
+        <section id="extra-stats" class="extra-stats hidden">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-icon"><i class="fa-solid fa-cake-candles"></i></span>
+                    <div class="stat-info">
+                        <span class="stat-title">Next Birthday</span>
+                        <span id="next-birthday" class="stat-value">-- days left</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-icon"><i class="fa-solid fa-heart"></i></span>
+                    <div class="stat-info">
+                        <span class="stat-title">Total Days Lived</span>
+                        <span id="total-days" class="stat-value">--</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="calculator-footer">
+            <div class="developer-info">
+                <p class="dev-name"><i class="fa-solid fa-user"></i> Shivangi uikey</p>
+                <p class="dev-email"><i class="fa-solid fa-envelope"></i> Shivangiuikey222@gmail.com</p>
+            </div>
+            
+            <div class="action-btn-container">
+                <a href="https://digitalheroesco.com" target="_blank" rel="noopener noreferrer" id="hero-btn" class="hero-btn">
+                    <span class="btn-glow"></span>
+                    <i class="fa-solid fa-rocket"></i>
+                    <span>Built for Digital Heroes</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+    <!-- JS Script -->
+    <script src="script.js"></script>
+</body>
+</html>
